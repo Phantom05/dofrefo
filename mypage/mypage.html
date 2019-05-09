@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=s, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./public/dist/assets/js/polyfills.js"></script>
+  <link rel="stylesheet" href="./public/dist/assets/css/common.min.css">
+  <link rel="stylesheet" href="./public/dist/assets/css/pages/mypage.min.css">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+
+</head>
+
+<body>
+  <div class="container mypage">
+
+
+    <ul class="mypage mypage__menu_list_ul">
+      <li class="mypage mypage__menu_list">
+        <a href="#" class="mypage__menu_list_an" data-name="view_v_myPage">My Info</a>
+      </li>
+      <li class="mypage__menu_list">
+        <a href="#" class="mypage__menu_list_an" data-name="view_v_addPage">New Address Add</a>
+      </li>
+      <li class="mypage__menu_list">
+        <a href="#" class="mypage__menu_list_an" data-name="view_v_infoLoad">Address Info</a>
+      </li>
+      <li class="mypage__menu_list">
+        <a href="#" class="mypage__menu_list_an" data-name="view_v_orderPage">Order Info</a>
+      </li>
+    </ul>
+
+    <div class="mypage__view_box">
+
+
+
+
+      <section class="mypage__menu_view " data-name="view_v_myPage">
+
+      </section>
+
+      <section class="mypage__menu_view " data-name="view_v_addPage">
+        <strong
+          class="box-title box-title--border d-block text-capitalize mb-3 mt-5 mypage mypage__newAddress_title">New
+          Address Add</strong>
+        <div class="box shipbox">
+          <form action="https://testing.com" id="hausForm">
+            <div class="form-group row">
+
+              <input type="hidden" id="" value="1">
+              <div class="col-sm-3">
+                <label for="shiphausno" class="col-form-label mypage__newAddress_label">Haus no.</label>
+                <input type="text" class="form-control" id="" name="shiphausno" value="2134321" placeholder="Haus no."
+                  required>
+              </div>
+              <div class="col-sm-3">
+                <label for="" class="col-form-label mypage mypage__newAddress_label">Country</label>
+                <!-- <input type="hidden" id="" value="116"> -->
+                <input list="newAddressCountries" name="" id="" class="form-control" required>
+                <datalist id="newAddressCountries">
+                  <option data-value="1" value="Afghanistan"></option>
+                  <option data-value="3" value="Albania"></option>
+                  <option data-value="4" value="Algeria"></option>
+                </datalist>
+              </div>
+
+              <div class="col-sm-3">
+                <label for="" class="col-form-label mypage mypage__newAddress_label">State</label>
+                <input type="hidden" id="" value="116">
+                <input list="newAddressState" name="" id="" class="form-control" required>
+                <datalist id="newAddressState">
+                  <option data-value="1" value="A"></option>
+                  <option data-value="2" value="B"></option>
+                  <option data-value="3" value="C"></option>
+                </datalist>
+              </div>
+
+              <div class="col-sm-3">
+                <label for="shipzipcode" class="col-form-label mypage__newAddress_label">Zipcode</label>
+                <input type="text" class="form-control" id="" name="shipzipcode" value="50403" placeholder="Zipcode"
+                  required>
+              </div>
+
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label for="shipstreet1" class="col-form-label mypage__newAddress_label">Street(1)</label>
+                <input type="text" class="form-control" id="" name="shipstreet1" value="안양시" placeholder="Street (1)"
+                  required>
+              </div>
+              <div class="col-sm-6">
+                <label for="shipstreet2" class="col-form-label mypage__newAddress_label">Street(2)</label>
+                <input type="text" class="form-control" id="" name="shipstreet2" value="" placeholder="Street (2)">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-3">
+                <label for="shipemail" class="col-form-label mypage__newAddress_label">Email</label>
+                <input type="email" class="form-control" id="" name="shipemail" placeholder="Email"
+                  value="test@test.com" required>
+              </div>
+              <div class="col-sm-3">
+                <label for="shiptel" class="col-form-label mypage__newAddress_label">Tel.</label>
+                <input type="text" class="form-control" id="" name="shiptel" placeholder="Tel." value="010-5486-9782"
+                  requireds>
+              </div>
+              <div class="col-sm-3">
+                <label for="shipmob" class="col-form-label mypage__newAddress_label">Mob.</label>
+                <input type="text" class="form-control" id="" name="shipmob" placeholder="Mob." value="">
+              </div>
+              <div class="col-sm-3">
+                <label for="shipeattn" class="col-form-label mypage__newAddress_label">Attn.</label>
+                <input type="text" class="form-control" id="" name="shipattn" placeholder="Attn." value="테스터1">
+              </div>
+            </div>
+            <div class="clearfix mt-3 mypage mypage__newAddress_btn_box">
+              <button type="submit" class="btn btn-primary  float-right mypage mypage__add_address_btn">Add
+                address</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+
+      <section class="mypage__menu_view on mypage__address_info_con" data-name="view_v_infoLoad">
+        <!-- card -->
+        <div class="mypage__card_box">
+          
+            <div class="mypage__card" data-toggle="modal" data-target="#infoModal" data-list="#addressList_v1"
+            data-whatever="Title Name : ex) My First Address info" title="Modify on click." alt="Modify on click.">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                      <tr id="addressList_v1" class="mypage__table_thtr">
+                        <th class="list-item">#</th>
+                        <th class="list-item">Haus no</th>
+                        <th class="list-item">Email</th>
+                        <th class="list-item">Country</th>
+                        <th class="list-item">Attn</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="mypage__table_tdtr">
+                        <td>01</td>
+                        <td>111111</td>
+                        <td>test@test.com</td>
+                        <td>Republic of Korea</td>
+                        <td>test</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+
+          <div class="mypage__card" data-toggle="modal" data-target="#infoModal" data-list="#addressList_v2"
+            data-whatever="Title Name : ex) My Seconds Address info"  title="Modify on click." alt="Modify on click.">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr id="addressList_v2" class="mypage__table_thtr">
+                    <th class="list-item">#</th>
+                    <th class="list-item">Haus no</th>
+                    <th class="list-item">Email</th>
+                    <th class="list-item">Country</th>
+                    <th class="list-item">Attn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="mypage__table_tdtr">
+                    <td>02</td>
+                    <td>222222</td>
+                    <td>test@test.com</td>
+                    <td>Republic of Korea</td>
+                    <td>test</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+       
+
+        <nav aria-label="Page navigation" class="pagination__center">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+              </li>
+            </ul>
+          </nav>
+
+
+
+        <div class="display_none" role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#addressInfo_v1" aria-controls="addressInfo_v1" role="tab"
+                data-toggle="tab">Haus</a></li>
+            <li role="presentation"><a href="#addressInfo_v2" aria-controls="addressInfo_v2" role="tab"
+                data-toggle="tab">Street</a></li>
+            <li role="presentation"><a href="#addressInfo_v3" aria-controls="addressInfo_v3" role="tab"
+                data-toggle="tab">test3</a></li>
+            <li role="presentation"><a href="#addressInfo_v4" aria-controls="addressInfo_v4" role="tab"
+                data-toggle="tab">test4</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="addressInfo_v1">
+              <div class="mypage mypage__address_info_box">
+                <div>
+                  <strong
+                    class="box-title box-title--border d-block text-capitalize mb-3 mt-5 mypage mypage__modal_title">Haus</strong>
+                  <ul class="list-group list-group-flush" id="hausList">
+                    <li class="list-group-item"><strong>haus no : </strong> <span>2134324</span></li>
+                    <li class="list-group-item"><strong>Email : </strong> <span>test@test.com</span></li>
+                    <li class="list-group-item"><strong>Tel : </strong> <span>010-0000-0000</span></li>
+                    <li class="list-group-item"><strong>Mob : </strong> test</li>
+                    <li class="list-group-item"><strong>Attn : </strong> test</li>
+                  </ul>
+                </div>
+                <div class="mypage__address_info_btn_box">
+                  <button type="button" class="btn btn-primary btn-lg mypage mypage__mod_btn" data-toggle="modal"
+                    data-target="#infoModal" data-list="#hausList" data-whatever="First Address Info">Mod</button>
+
+                  <!-- <button class="btn btn-primary btn-lg mypage mypage__mod_btn" type="button" data-toggle="collapse"
+                    data-target="#info_v1" aria-expanded="false" aria-controls="collapseExample">Cancle</button> -->
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="addressInfo_v2">
+              <div class="mypage mypage__address_info_box">
+                <div>
+                  <strong
+                    class="box-title box-title--border d-block text-capitalize mb-3 mt-5 mypage mypage__modal_title">Street</strong>
+                  <ul class="list-group list-group-flush" id="streetList">
+                    <li class="list-group-item"><strong>Contry : </strong> <span>Republic of Korea</span></li>
+                    <li class="list-group-item"><strong>Street(1) : </strong> <span>안양시</span></li>
+                    <li class="list-group-item"><strong>Street(2) : </strong> <span>test</span></li>
+                  </ul>
+                  <div class="mypage__address_info_btn_box">
+                    <button type="button" class="btn btn-primary btn-lg mypage mypage__mod_btn" data-toggle="modal"
+                      data-target="#infoModal" data-list="#streetList" data-whatever="Seconds Address Info">Mod</button>
+
+                    <!-- <button class="btn btn-primary btn-lg mypage mypage__mod_btn" type="button" data-toggle="collapse"
+                      data-target="#info_v2" aria-expanded="false" aria-controls="collapseExample">Cancle</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="addressInfo_v3">
+
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="addressInfo_v4">
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal__box">
+          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button> -->
+                  <h4 class="modal-title" id="infoModalLabel">New message</h4>
+                </div>
+                <form action="www.google.com" id="addressInfoModalForm" method="">
+                  <div class="modal-body">
+                    <div class="form-group modal_form_body">
+                      <label for="recipient-name" class="control-label mypage mypage__address_info_modal_label">Haus no
+                        :</label>
+                      <input type="text" class="form-control" id="recipient-name">
+
+                      <label for="recipient-name" class="control-label mypage mypage__address_info_modal_label">Email
+                        :</label>
+                      <input type="text" class="form-control" id="recipient-name">
+
+                      <label for="recipient-name" class="control-label mypage mypage__address_info_modal_label">Tel
+                        :</label>
+                      <input type="text" class="form-control" id="recipient-name">
+
+                      <label for="recipient-name" class="control-label mypage mypage__address_info_modal_label">Mob
+                        :</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">OK</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="mypage mypage__menu_view" data-name="view_v_orderPage">
+
+      </section>
+    </div>
+
+  </div>
+  <!-- <script src="./mypage.js" ></script> -->
+  <script src="./public/dist/assets/js/mypage.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
