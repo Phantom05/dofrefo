@@ -46,23 +46,23 @@
       </section>
 
       <section class="mypage__menu_view " data-name="view_v_addPage">
-        <strong
+        <!-- <strong
           class="box-title box-title--border d-block text-capitalize mb-3 mt-5 mypage mypage__newAddress_title">New
-          Address Add</strong>
-        <div class="box shipbox">
+          Address Add</strong> -->
+        <div class="box">
           <form action="https://testing.com" id="hausForm">
             <div class="form-group row">
 
               <input type="hidden" id="" value="1">
               <div class="col-sm-3">
                 <label for="shiphausno" class="col-form-label mypage__newAddress_label">Haus no.</label>
-                <input type="text" class="form-control" id="" name="shiphausno" value="2134321" placeholder="Haus no."
+                <input type="text" class="form-control" id="" name="shiphausno" value="" placeholder="Haus no."
                   required>
               </div>
               <div class="col-sm-3">
                 <label for="" class="col-form-label mypage mypage__newAddress_label">Country</label>
-                <!-- <input type="hidden" id="" value="116"> -->
-                <input list="newAddressCountries" name="" id="" class="form-control" required>
+                <input type="hidden" id="" value="116">
+                <input list="newAddressCountries" name="" id="" class="form-control" required placeholder="Select">
                 <datalist id="newAddressCountries">
                   <option data-value="1" value="Afghanistan"></option>
                   <option data-value="3" value="Albania"></option>
@@ -73,7 +73,7 @@
               <div class="col-sm-3">
                 <label for="" class="col-form-label mypage mypage__newAddress_label">State</label>
                 <input type="hidden" id="" value="116">
-                <input list="newAddressState" name="" id="" class="form-control" required>
+                <input list="newAddressState" name="" id="" class="form-control" placeholder="Select">
                 <datalist id="newAddressState">
                   <option data-value="1" value="A"></option>
                   <option data-value="2" value="B"></option>
@@ -83,7 +83,7 @@
 
               <div class="col-sm-3">
                 <label for="shipzipcode" class="col-form-label mypage__newAddress_label">Zipcode</label>
-                <input type="text" class="form-control" id="" name="shipzipcode" value="50403" placeholder="Zipcode"
+                <input type="text" class="form-control" id="" name="shipzipcode" value="" placeholder="Zipcode"
                   required>
               </div>
 
@@ -91,7 +91,7 @@
             <div class="form-group row">
               <div class="col-sm-6">
                 <label for="shipstreet1" class="col-form-label mypage__newAddress_label">Street(1)</label>
-                <input type="text" class="form-control" id="" name="shipstreet1" value="안양시" placeholder="Street (1)"
+                <input type="text" class="form-control" id="" name="shipstreet1" value="" placeholder="Street (1)"
                   required>
               </div>
               <div class="col-sm-6">
@@ -103,12 +103,12 @@
               <div class="col-sm-3">
                 <label for="shipemail" class="col-form-label mypage__newAddress_label">Email</label>
                 <input type="email" class="form-control" id="" name="shipemail" placeholder="Email"
-                  value="test@test.com" required>
+                  value="" required>
               </div>
               <div class="col-sm-3">
                 <label for="shiptel" class="col-form-label mypage__newAddress_label">Tel.</label>
-                <input type="text" class="form-control" id="" name="shiptel" placeholder="Tel." value="010-5486-9782"
-                  requireds>
+                <input type="text" class="form-control" id="" name="shiptel" placeholder="Tel." value=""
+                  required>
               </div>
               <div class="col-sm-3">
                 <label for="shipmob" class="col-form-label mypage__newAddress_label">Mob.</label>
@@ -116,7 +116,7 @@
               </div>
               <div class="col-sm-3">
                 <label for="shipeattn" class="col-form-label mypage__newAddress_label">Attn.</label>
-                <input type="text" class="form-control" id="" name="shipattn" placeholder="Attn." value="테스터1">
+                <input type="text" class="form-control" id="" name="shipattn" placeholder="Attn." value="">
               </div>
             </div>
             <div class="clearfix mt-3 mypage mypage__newAddress_btn_box">
@@ -131,35 +131,35 @@
       <section class="mypage__menu_view on mypage__address_info_con" data-name="view_v_infoLoad">
         <!-- card -->
         <div class="mypage__card_box">
-          
-            <div class="mypage__card" data-toggle="modal" data-target="#infoModal" data-list="#addressList_v1"
+
+          <div class="mypage__card" data-toggle="modal" data-target="#infoModal" data-list="#addressList_v1"
             data-whatever="Title Name : ex) My First Address info" title="Modify on click." alt="Modify on click.">
             <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                      <tr id="addressList_v1" class="mypage__table_thtr">
-                        <th class="list-item">#</th>
-                        <th class="list-item">Haus no</th>
-                        <th class="list-item">Email</th>
-                        <th class="list-item">Country</th>
-                        <th class="list-item">Attn</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="mypage__table_tdtr">
-                        <td>01</td>
-                        <td>111111</td>
-                        <td>test@test.com</td>
-                        <td>Republic of Korea</td>
-                        <td>test</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <table class="table">
+                <thead>
+                  <tr id="addressList_v1" class="mypage__table_thtr">
+                    <th class="list-item">#</th>
+                    <th class="list-item">Haus no</th>
+                    <th class="list-item">Email</th>
+                    <th class="list-item">Country</th>
+                    <th class="list-item">Attn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="mypage__table_tdtr">
+                    <td>01</td>
+                    <td>111111</td>
+                    <td>test@test.com</td>
+                    <td>Republic of Korea</td>
+                    <td>test</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
           <div class="mypage__card" data-toggle="modal" data-target="#infoModal" data-list="#addressList_v2"
-            data-whatever="Title Name : ex) My Seconds Address info"  title="Modify on click." alt="Modify on click.">
+            data-whatever="Title Name : ex) My Seconds Address info" title="Modify on click." alt="Modify on click.">
             <div class="table-responsive">
               <table class="table">
                 <thead>
@@ -183,23 +183,22 @@
               </table>
             </div>
           </div>
-        </div>
+        </div> 
         <!-- card -->
-       
 
         <nav aria-label="Page navigation" class="pagination__center">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
-              </li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">&raquo;</a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">&raquo;</a>
+            </li>
+          </ul>
+        </nav>
 
 
 
@@ -321,7 +320,7 @@
 
   </div>
   <!-- <script src="./mypage.js" ></script> -->
-  <script src="./public/dist/assets/js/mypage.min.js"></script>
+  <script src="./public/dist/assets/js/mypage.min.js?ver-0.0.1"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 

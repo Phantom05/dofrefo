@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.display_none {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mypage__menu_list_ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.mypage__menu_list_an {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.mypage__menu_view {
+  display: none;
+  min-height: 400px;
+}
+
+.mypage__menu_view:nth-child(1) {
+  border: 1px solid orange;
+}
+
+.mypage__menu_view:nth-child(4) {
+  border: 1px solidrgb(35, 37, 131);
+}
+
+.mypage__menu_view.on {
+  display: block;
+}
+
+.mypage__menu_view {
+  padding: 10px;
+}
+
+.mypage .mypage__add_address_btn:hover {
+  background: #2e6ca3;
+}
+
+.mypage .mypage__modal_title {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.mypage .mypage__newAddress_title {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid #cacaca;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.mypage .mypage__newAddress_label {
+  font-weight: 400;
+}
+
+.mypage .mypage__newAddress_btn_box {
+  text-align: right;
+}
+
+.mypage .mypage__address_info_btn_box {
+  text-align: right;
+}
+
+.mypage .mypage__mod_btn {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.mypage .mypage__address_info_box {
+  padding: 15px;
+}
+
+.mypage .mypage__address_info_modal_label {
+  margin-top: 8px;
+}
+
+.mypage .mypage__card {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #f7f5f5;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.mypage .mypage__card:hover {
+  background: #ececec;
+  border: 1px solid #d8d8d8;
+}
+
+.mypage .pagination__center {
+  text-align: center;
+}
+
+.mypage .mypage__address_info_con {
+  min-height: 200px;
+}
+
+.mypage .mypage__table_caption {
+  padding-left: 5px;
+}
+
+.mypage .mypage__table_thtr {
+  font-weight: bold;
+}
+
+.mypage .mypage__table_tdtr {
+  color: #616161;
+}
+
+.mypage .mypage__mod_address_info_datalist {
+  cursor: pointer;
+}
+
+.mypage caption {
+  caption-side: top;
+}
+
+.btn {
+  cursor: pointer;
+}
