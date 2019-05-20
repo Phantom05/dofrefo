@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% var headObj = { cssName:"about/about",title:"DOF - About"} %>
+  <%- include('../../Common/head.ejs',headObj) %>
+</head>
+
+<body>
+    <%- include(`${process.cwd()}/views/Common/header.ejs`,{headerName:"DOF About"}) %>
+    <%- include(`${process.cwd()}/views/Common/menu.ejs`) %>
+
+  <div class="wrapper about">
+
+    <section class="about__section">
+      <div class="page__wapper">
+        <h1 class="page__title about__title">About</h1>
+        <div class="page__row">
+          <div class="page__item_box col-lg-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim beatae reprehenderit dicta molestias molestiae amet doloremque possimus eaque, tenetur dolorum magnam mollitia adipisci quae aliquam recusandae provident ipsam. Reiciendis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laboriosam saepe aspernatur, ullam sit in debitis quos doloremque, quaerat voluptatem ipsam obcaecati numquam ducimus sapiente beatae est alias dolor porro?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium ipsam nemo ducimus quos odit dicta, doloribus possimus suscipit aspernatur nulla, architecto quam, rem quod qui dolorum deserunt. Nam, mollitia!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about__section">
+      <div class="page__wapper">
+        
+        <div class="page__row">
+          <div class="page__item_box col-lg-12">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, alias. Fugit incidunt blanditiis ex quis, porro illo deserunt. Aut reiciendis aliquid nihil fugit cupiditate, accusantium impedit dicta nemo iste consectetur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, aspernatur quas sed explicabo nesciunt velit commodi non pariatur voluptates, obcaecati dolores illo magni possimus modi repellat, exercitationem atque provident 
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quibusdam modi magnam qui. Dicta mollitia sunt ut deserunt, veniam voluptates impedit quam sed! Neque perspiciatis doloribus error repellendus, delectus aperiam!s
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about__section">
+      <div class="page__wapper">
+        
+        <div class="page__row">
+          <div class="page__item_box col-lg-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ut impedit nihil adipisci enim nulla explicabo cumque, quas fugit culpa magnam praesentium eligendi sit atque voluptas harum esse nam officia?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque eveniet nemo assumenda consequatur doloribus nihil odit labore beatae accusamus! Excepturi suscipit quae aperiam debitis? Inventore placeat ipsam ad ratione sit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sit, odit nostrum molestiae, saepe mollitia molestias cupiditate rem accusantium aspernatur soluta quis debitis? Sed alias eveniet recusandae odio! Harum, repellat.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+  <%- include(`${process.cwd()}/views/Common/footer.ejs`) %>
+  <% var footObj = { scriptName:"about/about" } %>
+  <%- include(`${process.cwd()}/views/Common/foot.ejs`,footObj) %>
+</body>
+
+</html>

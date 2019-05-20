@@ -1,0 +1,56 @@
+$headerTop:90px;
+body{
+  padding-top: $headerTop;
+}
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: $headerTop; 
+  border: 1px solid red;
+  width: 100%;
+  background: #fff;
+  z-index: 10000;
+  .header__logo{
+    position: absolute;
+    left: 0;
+    display: inline-block;
+  }
+  .header__bar{
+    border: 1px solid #ececec;
+    margin-top: 15px;
+  }
+  .header__wrap{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    border: 1px solid orange;
+    height: $headerTop;
+  }
+  .header__user_box{
+
+  }
+  .header__nav{
+    position: absolute;
+    border: 1px solid red;
+    min-width: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .header__nav_ul{
+    &:after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+  .header__nav_list{
+    float: left;
+  }
+  .header__nav_an{
+    display: block;
+    border: 1px solid blue;
+    padding: 5px;
+  }
+}

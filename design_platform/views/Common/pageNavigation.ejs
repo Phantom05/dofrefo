@@ -1,0 +1,109 @@
+<!-- page Navigation -->
+<form action="" method="POST" id="pageNationForm" data-include-form="<%- (locals.includeForm)?includeForm :null %>">
+  <div class="page__navigation">
+    <div class="page__navigation_box">
+      <div class="page__navigation__number_box">
+
+        <button name="pageFirst" value="<%= firstPage %>" type="submit">◀◀</button>
+        <button name="pagePrev" type="submit">◀</button>
+        <%= curPage %>
+        <% for(let i = starPageNum ; i <= endPageNum ; i +=1){ %>
+        <button name="pageNum" value="<%= i %>" formaction="<%= pageAction %><%= i %>"
+          class="page__navigation_num <%= (curPage == i)?'on':null %>" type="submit"><%= i %></button>
+        <% } %>
+
+        <button name="pageNext" type="submit">▶</button>
+        <button name="pageLast" value="<%= lastPage %>" type="submit">▶▶</button>
+      </div>
+      <div>
+        Row per page : <select name="" id="">
+          <option value=""><%= pageListSize %></option>
+        </select>
+        <%= curPageSet %>-<%= totalPageSet %> of : <%=totalPageCount %>
+      </div>
+    </div>
+
+</form>
+
+<script>
+  //opt을 같이 넣어줘 소팅할떄
+
+  document.getElementById('pageNationForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    let data;
+    let properties = this.dataset.includeForm.split(',');
+    let elName = ['SELECT','INPUT'];
+    if (properties.length) {
+      console.log('존재');
+      let target;
+      for(let i = 0 ;i < properties.length ; i ++){
+        target  = document.querySelector(`#${properties[i]}`);
+        console.log(
+          target
+        )
+        // 함수로 빼기, 모아서 객체 맹글어 주는것.
+        Array.from(document.querySelectorAll(`#${target.id} *`)).forEach(x=>{
+          if(elName.includes(x.nodeName)){
+           if(x.nodeName == 'SELECT'){
+            console.log(x.name,x.value) 
+           }
+           if(x.nodeName == 'INPUT'){
+            if(x.getAttribute('type') == 'text'){
+              console.log(x,'text') //세션값
+            }
+            if(x.getAttribute('type') == 'search'){
+              console.log(x,'search') //세션값
+            }
+            if(x.getAttribute('type') == 'checkbox'){
+              console.log(x,'checkbox') //세션값
+            }
+            if(x.getAttribute('type') == 'radio'){
+              console.log(x,'radio') //세션값
+            }
+           }
+          }
+        })
+
+
+        // if(elName.includes(target.nodeName)){
+        //   console.log(target)
+
+        //   if(target.nodeName =='SELECT'){
+        //     console.log(target.value)
+
+        //   }
+        //   if(target.nodeName =='INPUT'){
+        //     console.log(target,'input')
+        //   }
+        // }
+
+        // console.log(target)
+      }
+
+     
+      data = {
+        curPage: '<%=curPage %>',
+      }
+    } else {
+      console.log('미존재')
+
+      data = {
+        curPage: '<%=curPage %>',
+      }
+    }
+
+
+    console.log(data)
+    let configJson = {
+      method: 'post',
+      url: '<%= pageAction %>',
+      data: data
+    }
+
+    doAxios(configJson, function (val) {
+      console.log(val, 'wow!')
+      window.location.href = '';
+    })
+  })
+</script>
+<!-- page Navigation -->

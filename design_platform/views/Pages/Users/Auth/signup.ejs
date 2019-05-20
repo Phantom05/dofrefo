@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% var headObj = { cssName:"users/signup",title:"DOF - Signup"} %>
+  <%- include(`${process.cwd()}/views/Common/head.ejs`,headObj) %>
+</head>
+
+<body>
+    <%- include(`${process.cwd()}/views/Common/header.ejs`,{headerName:"DOF HOME"}) %>
+    <%- include(`${process.cwd()}/views/Common/menu.ejs`) %>
+
+  <div class="wrapper signup">
+    <div class="page__wapper" id="pageWapper">
+      <h1 class="page__title signup__title">Signup</h1>
+      <div class="page__row">
+        <div class="page__item_box col-lg-12">
+          <form action="" data-name="signupForm" class="signup__form">
+            <div>
+              <input type="text" name="username" autocomplete="off" value="monster2jy@gmail.com" class="sigup__input">
+            </div>
+            <div>
+              <input type="password" name="password" autocomplete="off" value="wnsdud18!" class="sigup__input">
+            </div>
+            <div>
+              <input type="text" placeholder="name" class="sigup__input">
+            </div>
+            <div>
+              <input type="text" placeholder="address" class="sigup__input">
+            </div>
+            <div>
+              <input type="text" placeholder="name" class="sigup__input">
+            </div>
+            <div>
+              <a href="/users/login">Login Page</a>
+              <input type="submit" value="Signup">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include(`${process.cwd()}/views/Common/footer.ejs`) %>
+  <% var footObj = { scriptName:"users/signup" } %>
+  <%- include(`${process.cwd()}/views/Common/foot.ejs`,footObj) %>
+</body>
+
+</html>

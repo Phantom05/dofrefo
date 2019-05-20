@@ -1,0 +1,66 @@
+@import '../common/base','../common/vari','../common/mixin';
+.footer{
+  border-top:2px solid #cccccc;
+  padding-top: 20px;
+  min-height: 200px;
+  padding-bottom: 50px;
+  .footer__sns_ul{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    &:after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+  .footer__sns_list{
+    float: left;
+    cursor: pointer;
+    &:hover .footer__sns_an{
+      transform: rotateY(-360deg);
+      transition: .7s;
+      
+    }
+  }
+  .footer__top{
+    position: relative;
+  }
+  .footer__sns_an{
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 4px;
+  }
+  .footer__sns_img{
+    width: 100%;
+    height: 100%;
+  }
+  .footer_info{
+    margin: 15px 0;
+  }
+  .footer_info_p{
+    font-size: 14px;
+    color: #8d8d8d;
+    &:last-child{
+      margin-top: 15px;
+    }
+  }
+
+  .footer__nav_list{
+
+  }
+
+  .footer__nav_an{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: $roboto;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

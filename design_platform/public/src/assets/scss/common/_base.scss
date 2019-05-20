@@ -1,0 +1,247 @@
+// body{
+//   background: #2a2a31;
+//   transition: .5s;
+//   overflow-x: hidden;
+// }
+
+// .header__wapper{
+//   margin-left: 300px;
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   z-index: 9000;
+//   background: #ffffff;
+//   height: 30px;
+//   border: 1px solid red;
+// }
+// .page__wapper{
+//   margin-left: 300px;
+//   margin-top: 60px;
+//   position: absolute;
+//   z-index: 10;
+//   min-height: calc(100vh - 60px);
+//   width: calc(100vw - 300px);
+//   padding-bottom: 1px;
+//   color: #fff;
+//   background: #2a2a31;
+//   padding: 20px;
+//   transition: .3s ease-in-out;
+// }
+
+.page__wapper{
+  width: 1200px;
+  margin: auto;
+}
+
+// .--full_width{
+//   margin-left: 40px;
+//   width: calc(100vw - 40px);
+//   transition: .3s ease-in-out;
+// }
+.page__title{
+  color: #8b8b8b;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 30px;
+}
+.page__row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.page__wrap{
+  // width: 
+}
+.page__card{
+  position: relative;
+  background: #232329;
+  padding: 15px;
+}
+
+// .page__item_box{
+//   padding: 10px;
+//   padding-bottom: 15px;
+// }
+// .page__card:after{
+//   & & {
+//     display: block;
+//     content: '';
+//     clear: both;
+//   }
+// }
+
+
+// .page__navigation{
+//   position: relative;
+// }
+// .page__navigation:after{
+//   display: block;
+//   content: '';
+//   clear: both;
+// }
+// .page__navigation_box{
+//   float: left;
+//   width: 30%;
+// }
+// .page__navigation_box:last-child{
+//   width: 70%;
+// }
+// .page__navigation_box:last-child{
+//   text-align: right;
+// }
+// .page__navigation_box:after{
+//   display: block;
+//   content: '';
+//   clear: both;
+// }
+// .page__navigation__number_box{
+//   font-size: 12px;
+//   position: relative;
+//   top: 13px;
+ 
+// }
+// .page__navigation_num{
+//   background: transparent;
+//   border: 0;
+//   color: #ececec;
+//   margin-right: 3px;
+//   text-decoration: none;
+// }
+// .page__navigation_num:last-child{
+//   margin-right: 0;
+// }
+// .page__navigation_inner_box{
+//   display: inline-block;
+//   position: relative;
+//   text-align: right;
+// }
+// .page__navigation_pageage,.page__navigation_perpage,.page__navigation_viewlist{
+//   position: relative;
+//   top: -4px;
+// }
+// .page__navigation_perpage{
+//   font-size: 12px;
+//   color: #dddddd;
+// }
+// .page__navigation_viewlist{
+//   background: transparent;
+//   border: 0;
+//   color: #dddddd;
+//   font-size: 12px;
+//   letter-spacing: -1px;
+// }
+// .page__navigation_pageage{
+//   font-size: 12px;
+//   color: #dddddd;
+//   letter-spacing: -1px;
+// }
+// .page__navigation_arrow{
+//   background: transparent;
+//   width: 40px;
+//   height: 40px;
+//   color: #dddddd;
+//   font-size: 12px;
+//   font-weight: bold;
+//   border: 0;
+//   border-radius: 100%;
+//   text-align: center;
+//   transition: .3s;
+// }
+// .page__navigation_arrow:hover{
+//   background: #141422;
+//   transition: .3s;
+// }
+// .page__navigation_arrow_icon{
+//   font-size: 18px;
+// }
+
+.page__navigation_num{
+  background: transparent;
+  border: 0;
+  &.on{
+    color: rgb(20, 120, 187);
+    font-weight: bold;
+  }
+}
+
+.col-lg-3{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-lg-6{
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-lg-4{
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.col-lg-8{
+  flex: 0 0 66.666666%;
+  max-width: 66.666666%;
+}
+.col-lg-9{
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-lg-12{
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+body {
+  // background: #f1f1f1;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+// #loading{
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   background: rgb(48, 48, 48);
+//   width: 100%;
+//   height: 100%;
+//   z-index: 11000;
+// }
+// #load {
+//   position: absolute;
+//   left: 50%;
+//   top: 48%;
+//   transform: translate(-50%,-50%);
+// 		width: 50px;
+//     animation: loading 3s linear infinite;
+//     #loading-inner {
+// 		  stroke: {
+//         dashoffset: 0;
+//         dasharray: 300;
+//         width: 10;
+//         miterlimit: 10;
+//         linecap: round;
+//       }
+//       animation: loading-circle 2s linear infinite;
+//       stroke: #4cd1b6;
+//       fill: transparent;
+//     }
+// 	}
+
+// @keyframes loading {
+// 		0% { 
+//       transform: rotate(0); 
+//     }
+// 		100% { 
+//       transform: rotate(360deg);
+//     }
+// }
+// @keyframes loading-circle {
+// 		0% { 
+//       stroke-dashoffset: 0
+//     }
+// 		100% { 
+//       stroke-dashoffset: -600;
+//     }
+// }
+
+
+

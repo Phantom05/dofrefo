@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% var headObj = { cssName:"user",title:"DOF - title"} %>
+  <%- include('../../Common/head.ejs',headObj) %>
+</head>
+
+<body>
+  <%- include('../../Common/header.ejs',{headerName:"DOF Profile"}) %>
+  <%- include('../../Common/menu.ejs') %>
+
+  <div class="wrapper">
+    <div class="page__wapper" id="pageWapper">
+      <h1 class="page__title">User page</h1>
+      <div class="page__row">
+        <div class="page__item_box col-lg-12">
+          user page
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% var footObj = { scriptName:"user" } %>
+  <%- include('../../Common/foot.ejs',footObj) %>
+</body>
+
+</html>

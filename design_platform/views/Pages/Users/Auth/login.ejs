@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% var headObj = { cssName:"users/login",title:"DOF - Login"} %>
+  <%- include(`${process.cwd()}/views/Common/head.ejs`,headObj) %>
+</head>
+
+<body>
+    <%- include(`${process.cwd()}/views/Common/header.ejs`,{headerName:"DOF HOME"}) %>
+    <%- include(`${process.cwd()}/views/Common/menu.ejs`) %>
+
+  <div class="wrapper login">
+    <div class="page__wapper" id="pageWapper">
+      <h1 class="page__title login__title">Login</h1>
+      <div class="page__row">
+        <div class="page__item_box col-lg-12">
+            <form action="" data-name="loginForm" class="login__form">
+              <div>
+                <input type="text" name="username" autocomplete="off" value="monster2jy@gmail.com" class="login__input">
+              </div>
+              <div>
+                <input type="password" name="password" autocomplete="off" value="wnsdud18!" class="login__input">
+              </div>
+              <div>
+                <input type="submit" value="Login">
+                <a href="/users/signup">Signup Page</a>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include(`${process.cwd()}/views/Common/footer.ejs`) %>
+  <% var footObj = { scriptName:"users/login" } %>
+  <%- include(`${process.cwd()}/views/Common/foot.ejs`,footObj) %>
+</body>
+
+</html>

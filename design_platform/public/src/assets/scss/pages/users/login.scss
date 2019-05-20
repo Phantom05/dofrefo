@@ -1,0 +1,19 @@
+.login{
+  .login__title{
+    text-align: center;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .login__form{
+    width: 300px;
+    margin: 100px auto;
+  }
+  .login__input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}

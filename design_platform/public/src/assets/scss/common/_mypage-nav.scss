@@ -1,0 +1,31 @@
+
+.mypageNav{
+  .mypageNav__card{
+    border: 1px solid orange;
+    margin:  15px 0;
+    background: #ececec;
+    padding: 15px;
+  }
+  .mypageNav__title{
+    font-size: 18px;
+    font-weight: bold;
+    @include fontMixin(#040404);
+  }
+  .mypageNav__list{
+    margin: 5px 0;
+    transition: .4s;
+    &:hover .mypageNav__list_an{
+      color: #fff;
+      transition: .4s;
+      background: rgba(27, 23, 16, 0.452);
+    }
+  }
+  .mypageNav__list_an{
+    display: block;
+    padding: 5px;
+  }
+  .mypageNav__list_an.on{
+    color: red;
+  }
+
+}

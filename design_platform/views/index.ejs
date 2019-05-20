@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% var headObj = { cssName:"index",title:"DOF - title"} %>
+  <%- include(`${process.cwd()}/views/Common/head.ejs`,headObj) %>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <%- include(`${process.cwd()}/views/Common/header.ejs`,{headerName:"DOF HOME"}) %>
+    <%- include(`${process.cwd()}/views/Common/menu.ejs`) %>
+
+  <div class="wrapper main">
+    <div class="" id="pageWapper">
+
+      <section class="main__section">
+        <div class="page__wapper">
+          <div class="page__row">
+            <div class="page__item_box col-lg-12">
+              <h1 class="page__title">DOF Home</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section">
+        <div class="page__wapper">
+          <div class="page__row">
+            <div class="page__item_box col-lg-12">
+              <div id="bridgeServiceCounter">
+                <h2>Client</h2>
+                <div class="num main__view_counter_box" data-count="9845">
+                  000
+                </div>
+
+                <h2>Designer</h2>
+                <div class="num main__view_counter_box" data-count="5165">
+                  000
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section">
+        <div class="page__wapper">
+          <div class="page__row">
+            <div class="page__item_box col-lg-12">
+              <div id="projectCounter">
+                <h2>In-Progess(Live) Project</h2>
+                <div class="num main__view_counter_box" data-count="3251">
+                  000
+                </div>
+
+                <h2>Deal Project</h2>
+                <div class="num main__view_counter_box" data-count="12214">
+                  000
+                </div>
+
+                <h2>Completed Project</h2>
+                <div class="num main__view_counter_box" data-count="1567945">
+                  000
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- star slide -->
+      <section class="main__section">
+          <div class="page__wapper">
+            <div class="page__row">
+              <div class="page__item_box col-lg-12">
+                <div id="starSlide">
+                  starSlide
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </section>
+
+      <!-- rcommend slide -->
+      <section class="main__section">
+        <div class="page__wrapper">
+          <div class="page__row">
+            <div class="slide_con">
+              <h2 class="recommend__title">Recommed Labs/Designer</h2>
+              <div id="recommendSlide">
+                <div class="slider_list">
+                  <div class="slider__box">
+                    <p class="slider__first_tx_box">111
+                      This is the place to generate Dai! <br>
+                      Use this dapp from the Maker team to manage <br>
+                      depositing of collateral and generation of Dai.
+                    </p>
+                    <div class="silder__first_img_Box">
+                      <a href="/">
+                          <img src="https://cdp.makerdao.com/static/media/welcome-hero.c7660c34.svg" alt=""
+                          class="slider__first_img">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider_list">
+                  <div class="slider__box">
+                      <p class="slider__first_tx_box">222
+                          This is the place to generate Dai! <br>
+                          Use this dapp from the Maker team to manage <br>
+                          depositing of collateral and generation of Dai.
+                        </p>
+                    <div class="silder__first_img_Box">
+                      <a href="">
+                          <img src="https://cdp.makerdao.com/static/media/welcome-hero.c7660c34.svg" alt=""
+                          class="slider__first_img">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider_list">
+                  <div class="slider__box">
+                    your content3
+                  </div>
+                </div>
+                <div class="slider_list">
+                  <div class="slider__box">
+                    your content4
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section">
+        <div class="page__wapper">
+          <div class="page__row">
+            <% var dummyData = [
+              {
+                title:"News",
+                list:[
+                  {
+                    num:1,
+                    name:"News Jack",
+                    value:"Test"
+                  },
+                ]
+              },{
+                title:"Blog",
+                list:[
+                  {
+                    num:1,
+                    name:"Blog Jack",
+                    value:"Test"
+                  },
+                ]
+              },{
+                title:"Event",
+                list:[
+                  {
+                    num:1,
+                    name:"Evet Jack",
+                    value:"Test1"
+                  },
+                  {
+                    num:2,
+                    name:"Evet Jack",
+                    value:"Test2"
+                  },
+                ]
+              }]%>
+
+            <div class="page__item_box col-lg-12">
+              <h2 class="main__news_title">News & Blog & Event</h2>
+              <div class="main__news" id="mainNewsViewsBox">
+                <% for (let i = 0 ; i < dummyData.length ; i ++){ %>
+
+                <div class="main__news_box">
+                  <div class="main__news_card">
+                    <div class="main__news_card_title">
+                      <%= dummyData[i].title %>
+                    </div>
+                    <div class="main__news_card_content_header">
+                      No. Name. value
+                    </div>
+                    <div class="main__news_card_content_body">
+                      <% for(let j = 0 ; j < dummyData[i].list.length ; j++){ %>
+                      <div class="main__news_list">
+                        <%= dummyData[i].list[j].name %>
+                      </div>
+                      <% } %>
+                    </div>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    </div>
+
+    <%- include(`${process.cwd()}/views/Common/footer.ejs`) %>
+    <% var footObj = { scriptName:"index" } %>
+    <%- include(`${process.cwd()}/views/Common/foot.ejs`,footObj) %>
+</body>
+
+</html>

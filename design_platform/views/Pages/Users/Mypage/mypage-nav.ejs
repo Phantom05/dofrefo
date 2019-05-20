@@ -1,0 +1,32 @@
+<% mypageNavListObj=[
+  {
+    title:`Project`,
+    list:[`applied`,`approve`,`dealed`,`completed`,`history`],
+  },
+  {
+    title:`Story`,
+    list:[`my story`,`specialty`,`certificate`],
+  },
+  {
+    title:`Privacy`,
+    list:[`privacy`,`password`,`account`],
+  },
+  {
+    title:`Point`,
+    list:[`total`,`point`,`coupon`,`history`],
+  },
+] %>
+<div class="mypageNav">
+  <% mypageNavListObj.forEach((x)=>{  %>
+  <div class="mypageNav__card">
+    <h2 class="mypageNav__title"><%=x.title %></h2>
+    <ul class="mypageNav__ul">
+      <% x.list.forEach((x)=>{ %>
+      <li class="mypageNav__list"><a href="" class="mypageNav__list_an <%-(x == pageName)?'on': null%>">
+          <%= x %>
+        </a></li>
+      <% }) %>
+    </ul>
+  </div>
+  <% }) %>
+</div>

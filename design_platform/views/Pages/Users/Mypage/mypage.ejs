@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% var headObj = { cssName:"users/mypage",title:"DOF - Mypage"} %>
+  <%- include(`${process.cwd()}/views/Common/head.ejs`,headObj) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/header.ejs`,{headerName:"DOF HOME"}) %>
+  <%- include(`${process.cwd()}/views/Common/menu.ejs`) %>
+
+  <% var profileInfoObj = {
+    name:"John",
+    country:'Unite States',
+    useLanguage:['kor','eng','jpn'],
+    profileImg:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlpONM-FYi4sLpOBCxnnsDavJ5A8SfWZWhg20qOhSfj9uNbdc'
+  } %>
+  <main class="wrapper mypage">
+    <div class="page__wapper" id="pageWapper">
+      <h1 class="page__title">MYPAGE</h1>
+      <div class="page__row">
+        <div class="page__item_box col-lg-12">
+          <div class="profile profile__box">
+              <button class="profile__edit_btn">Live project view</button>
+              <div class="profile__content">
+                  <img src="<%= profileInfoObj.profileImg %>" alt="profile image">
+                  <div class="profile__content_box">
+                    <div class="profile__content_title_label">
+                      name : 
+                    </div>
+                    <div class="profile__content_title_txt">
+                        <%= profileInfoObj.name %>
+                    </div>
+                  </div>
+
+                  <div class="profile__content_box">
+                    <div class="profile__content_title_label">
+                      country :
+                    </div>
+                    <div class="profile__content_title_txt">
+                        <%= profileInfoObj.country %>
+                    </div>
+                  </div>
+
+                  <div class="profile__content_box">
+                    <div class="profile__content_title_label">
+                      language : 
+                    </div>
+                    <div class="profile__content_title_txt">
+                        <%= profileInfoObj.language %>
+                    </div>
+                  </div>
+              </div>
+              <div>
+                <form action="" id="profileEditForm">
+                  <button type="submit" name="editBtn" class="profile__edit_btn">Edit</button>
+
+                </form>
+              </div>
+
+          </div>
+        </div>
+      </div>
+      <%- include(`./mypage-nav.ejs`,{pageName:pageName}) %>
+      <% var brigedDateObj = [
+        {
+          num:0,
+          dueDate:'02/03/2019',
+          endDate:'02/05/2019',
+          cost:{
+            exepted:'5$',
+            dealed:'4$'
+          }
+        },
+        {
+          num:1,
+          dueDate:'02/02/2019',
+          endDate:'02/05/2019',
+          cost:{
+            exepted:'5$',
+            dealed:'6$'
+          }
+        },
+      ]%>
+      <div class="page__row project">
+        <div class="page__item_box col-lg-12">
+          <div class="mypageProject__title">
+            Project
+          </div>
+            <div class="mypageProject__sub_title">
+              dealed (List if projects you hav dealed)
+            </div>
+            <form action="" id="delaedCancleForm" method="POST">
+
+            </form>
+          <% for(let i = 0 ; i < brigedDateObj.length ; i++){ %>
+            <%= i %>
+            <div class="mypageProject__section">
+              <div class="mypageProject__case_title">
+                  Bridge-case-#<%= brigedDateObj[i].num%>
+              </div>
+              <div>
+                <h3>Due Date</h3> 
+                <div><%= brigedDateObj[i].dueDate%></div>
+
+                <h3>End Date</h3>
+                <div><%= brigedDateObj[i].endDate%></div>
+                <div>
+                  <button type="submit" form="delaedCancleForm" formaction="">Cancle</button>
+                </div>
+              </div>
+              <div>
+                <h2>Cost</h2>
+                <div>
+                  <h3>exepted</h3>
+                  <div><%= brigedDateObj[i].cost.exepted%></div> 
+                  <h3>dealed</h3>
+                  <div><%= brigedDateObj[i].cost.dealed%></div>
+                </div>
+              </div>
+            </div>
+            
+          <% } %>
+        </div>
+      </div>
+ 
+      <!-- page nation -->
+      <% var pageNation = {
+        starPageNum:1,
+        endPageNum:5,
+        curPage:1,
+        pageListSize:5,
+        firstPage:0,
+        lastPage:105,
+        curPageSet:1,
+        prevPageSet:0,
+        nextPageSet:2,
+        totalPageSet:20,
+        totalPageCount:100,
+        pageAction:'/aaa',
+        includeForm:['timeSortForm','searchForm','sortBox']
+      }%>
+
+      <!-- 세션값 -->
+      <form action="" id="timeSortForm"> 
+        <select name="timeSortSelect" id="">
+          <option value="up">up</option>
+          <option value="down">down</option>
+        </select>
+      </form>
+
+      <!-- 세션값 -->
+      <form action="" id="searchForm">
+        <input type="search" name="searchInput" value="1zzz">
+      </form>
+
+      <!-- 세션값 -->
+      <form action="" id="sortBox">
+        <div>
+            male : <input type="radio" name="gender">
+            femail : <input type="radio" name="gender">
+        </div>
+        <div>
+          soccer : 
+            <input type="checkbox" name="soccer">
+          baseball :
+            <input type="checkbox" name="baseball">
+        </div>
+      </form>
+
+
+       <div>
+          <%- include(`${process.cwd()}/views/Common/pageNavigation.ejs`,pageNation) %>
+       </div>
+       <!-- page nation -->
+     
+
+      
+    </div>
+  </main>
+  <%- include(`${process.cwd()}/views/Common/footer.ejs`) %>
+  <% var footObj = { scriptName:"users/mypage" } %>
+  <%- include(`${process.cwd()}/views/Common/foot.ejs`,footObj) %>
+</body>
+
+</html>
